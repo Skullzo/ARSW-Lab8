@@ -368,6 +368,30 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
+   **Luego de realizar los pasos correspondientes para realizar las respectivas pruebas en Escalabilidad Vertical y Horizontal, se presenta primero la Escalabilidad Horizontal, en la que se evidencia que cada solicitud se demoró en promedio 27 segundos, donde ninguna solicitud falló.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/EscalabilidadHorizontal.PNG)
+   
+   **Ahora, se presentan las pruebas luego de realizar Escalabilidad Vertical. Como se ve a continuación, cada solicitud se demoró en promedio 27 segundos también, donde 4 solicitudes fallaron.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/EscalabilidadVertical.PNG)
+   
+   **A continuación se presenta el uso de la CPU de la Máquina Virtual 1, la cual consumió un total aproximado de 60%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.png)
+   
+   **Ahora, se presenta el uso de la CPU de la Máquina Virtual 2, la cual consumió un total aproximado de 48%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/2.png)
+   
+   **Después, se presenta el uso de la CPU de la Máquina Virtual 3, la cual consumió un total aproximado de 31%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/3.png)
+   
+   **Finalmente, se presenta el uso de la CPU de la Máquina Virtual 4, la cual consumió un total aproximado de 10%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/4.png)
+
 ## Autores
 [Alejandro Toro Daza](https://github.com/Skullzo)
 
