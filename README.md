@@ -48,11 +48,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part1/part1-vm-3000InboudRule.png)
 
-Luego de ejecutar el comando ```node FibonacciApp.js``` en la máquina virtual, se obtiene la siguiente salida en la terminal.
+**Luego de ejecutar el comando ```node FibonacciApp.js``` en la máquina virtual, se obtiene la siguiente salida en la terminal.**
 
 ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.PNG)
 
-Para comprobar que se haya compilado y desplegado con éxito en el navegador (en este caso Google Chrome), se escribe la siguiente URL: http://52.167.5.250:3000/fibonacci/6. Como se observa a continuación, se obtiene el valor Fibonacci correspondiente a 6, el cual es 8.
+**Para comprobar que se haya compilado y desplegado con éxito en el navegador (en este caso Google Chrome), se escribe la siguiente URL: http://52.167.5.250:3000/fibonacci/6. Como se observa a continuación, se obtiene el valor Fibonacci correspondiente a 6, el cual es 8.**
 
 ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.2.PNG)
 
