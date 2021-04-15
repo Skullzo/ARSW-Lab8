@@ -302,16 +302,95 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
    ¿Qué es SKU, qué tipos hay y en qué se diferencian?
    
+   Azure Container Registry está disponible en varios niveles de servicio (también conocidos como SKU). SKU Significa Unidad de mantenimiento de existencias (Stock Keeping Unit), son un código único asignado a un servicio o producto dentro de azure y representan la posibilidad para comprar existencias.
+   
+   * **Básico:** Un punto de entrada con costos optimizados para que los desarrolladores aprendan sobre Azure Container Registry. Los registros básicos tienen las mismas capacidades programáticas que Standard y Premium.
+
+   * **Estándar:** Los registros estándar ofrecen las mismas capacidades que los básicos, con un mayor rendimiento de imágenes y almacenamiento incluido. Los registros estándar deben satisfacer las necesidades de la mayoría de los escenarios de producción.
+
+   * **Premium:** Los registros Premium proporcionan la mayor cantidad de almacenamiento incluido y operaciones simultáneas, lo que permite escenarios de gran volumen. Además de un mayor rendimiento de imágenes, Premium agrega características como la replicación geográfica para administrar un solo registro en múltiples regiones, confianza en el contenido para la firma de etiquetas de imagen, enlace privado con puntos finales privados para restringir el acceso al registro.
+
+   Se encuentran clasificados en la siguiente tabla a continuación.
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/Tabla.PNG)
+   
    ¿Por qué el balanceador de carga necesita una IP pública?
+   
+   Es necesario asociar una dirección IP pública con una instancia de Azure Load Balancer para que pueda ser accesible desde internet. Esta dirección IP pública actúa como dirección IP de carga equilibrada.
 
 * ¿Cuál es el propósito del *Backend Pool*?
+
+   Define como evaluar los diferentes Back-Ends a través de sondas de estado, además de producir equilibrio de carga entre estos, en otras palabras, define el grupo de recursos que brindarán tráfico para una regla de equilibrio de carga determinada.
+
 * ¿Cuál es el propósito del *Health Probe*?
+
+   Se deben realizar sondeos de estado para detectar el el endless point del Back-End, se determinan que instancias recibiran nuevos flujos, en otras palabras, determina si la instancia está en buen estado. Si la instancia falla su prueba de estado suficientes veces, dejará de recibir tráfico hasta que comience a pasar las pruebas de estado nuevamente.
+
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
-* ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
-* ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+
+   El modo de distribución predeterminado para Azure Load Balancer es un hash de tupla de cinco elementos. La tupla contiene:
+   
+   * IP de origen.
+   * Puerto de origen.
+   * IP de destino.
+   * Puerto de destino.
+   * Tipo de protocolo.
+
+   El hash se utiliza para asignar el tráfico a los servidores disponibles. El algoritmo solo proporciona adherencia dentro de una sesión de transporte. Los paquetes que se encuentran en la misma sesión se dirigen a la misma dirección IP del centro de datos tras el punto de conexión con equilibrio de carga. Cuando el cliente inicia una nueva sesión desde la misma IP de origen, el puerto de origen cambia y provoca que el tráfico vaya hacia otro punto de conexión del centro de datos.
+
+   El modo utiliza un hash de tupla de dos elementos (IP de origen e IP de destino) o de tres elementos (IP de origen, IP de destino y tipo de protocolo) para asignar el tráfico a los servidores disponibles. Mediante el uso de la afinidad de la IP de origen, las conexiones que se han iniciado desde el mismo equipo cliente van al mismo punto de conexión del centro de datos.
+
+* ¿Qué es una *Virtual Network*?
+
+   Una *Virtual Network* o red virtual es una representación de la red propia en la nube, es un aislamiento lógico de la nube de Azure dedicada a su suscripción.
+   
+   ¿Qué es una *Subnet*?
+   
+   Una *Subnet* permite segmentar la red virtual en una o más subnets y además asignarles una parte del espacio de direcciones de la red virtual de cada subnet, además se pueden implementar recursos que se han creado en Azure en una subnet específica.
+   
+   ¿Para qué sirven los *address space* y *address range*?
+   
+   Los *Address Space* se deben especificar al crear una red virtual, debe ser un espacio de direcciones IP privadas personalizadas.
+
+* ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?
+
+   * Es una oferta de alta disponibilidad que protege las aplicaciones y los datos de fallas que puedan ocurrir en el datacenter, las zonas de disponibilidad son ubicaciones físicas de una región determinada por Azure, cada zona cuenta con uno o varios centros de datos.
+   * Se dividen en 3 diferentes zonas para para proteger las aplicaciones y los datos de fallas del centro de datos, se ofrece un mejor SLA de tiempo de activiad de VM de 99.99%
+   
+   ¿Qué significa que una IP sea *zone-redundant*?
+   
+   Los servicios de zona redudante hacen que la plataforma se replique automáticamnete en todas las zonas.
+   
 * ¿Cuál es el propósito del *Network Security Group*?
+
+   Se puede filtrar el trafico de red hacia los recursos de Azure y desde los recursos de Azure en una red virtual de Azure con un grupo de seguridd de red, además contienen reglas de seguridad que permiten o niegan el táfico de una red entrante.
+
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
+
+   **Luego de realizar los pasos correspondientes para realizar las respectivas pruebas en Escalabilidad Vertical y Horizontal, se presenta primero la Escalabilidad Horizontal, en la que se evidencia que cada solicitud se demoró en promedio 27 segundos, donde ninguna solicitud falló.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/EscalabilidadHorizontal.PNG)
+   
+   **Ahora, se presentan las pruebas luego de realizar Escalabilidad Vertical. Como se ve a continuación, cada solicitud se demoró en promedio 27 segundos también, donde 4 solicitudes fallaron.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/EscalabilidadVertical.PNG)
+   
+   **A continuación se presenta el uso de la CPU de la Máquina Virtual 1, la cual consumió un total aproximado de 60%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.png)
+   
+   **Ahora, se presenta el uso de la CPU de la Máquina Virtual 2, la cual consumió un total aproximado de 48%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/2.png)
+   
+   **Después, se presenta el uso de la CPU de la Máquina Virtual 3, la cual consumió un total aproximado de 31%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/3.png)
+   
+   **Finalmente, se presenta el uso de la CPU de la Máquina Virtual 4, la cual consumió un total aproximado de 10%.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/4.png)
 
 ## Autores
 [Alejandro Toro Daza](https://github.com/Skullzo)
