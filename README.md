@@ -102,6 +102,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![Imágen 2](images/part1/part1-vm-cpu.png)
 
+**A continuación se muestra el consumo de CPU de uso medido y el consumo total de Red. Como se puede observar, luego de realizar las operaciones correspondientes de Fibonacci con 1000000, 1010000, 1020000, 1030000, 1040000, 1050000, 1060000, 1070000, 1080000 y 1090000, se muestra el alto consumo de CPU y de Red.**
+
+![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/8.1.png)
+
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
@@ -125,7 +129,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
    
-   En total Azure junto con la VM crea X recursos.
+   En total Azure junto con la VM crea **7** recursos.
    * Red virtual.
    * Máquina virtual.
    * Dirección IP pública.
@@ -134,10 +138,24 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    * Disco.
    * Clave SSH.
 
-      ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
 
 2. ¿Brevemente describa para qué sirve cada recurso?
-3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+   * **Maquina Virtual:** Se crea para emular un ordenador con sus diferentes componentes y recursos.
+   * **Interfaz de red:** Sirve para señalar la conexión que se da de manera física, entre los dispositivos y el sistema.
+   * **Disco:** Se ultiliza para el almacenamiento de datos. 
+   * **Dirección IP pública:** Permite acceder a la vm y a conexiones.
+   * **Grupo de seguridad:** Se utiliza para filtrar el tráfico de la red.
+
+3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+   
+   * Si se utiliza el comando ```npm FibonacciApp.js``` y la máquina se suspende por inactividad, la aplicación dejaría de correr, al igual que si existe un error en la máquina virtual. Por eso se utiliza ```forever start FibonacciApp.js```.
+
+   ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+   * El *Inbound port rule* sirve para permitir la entrada al servicio que se está levantando. En este caso la aplicación corre por el puerto 3000, así que es este el que se debe abrir.
+
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
