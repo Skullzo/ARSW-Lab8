@@ -57,16 +57,46 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.2.PNG)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
+    
     * 1000000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.1.PNG)
+
     * 1010000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.2.PNG)
+
     * 1020000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.3.PNG)
+
     * 1030000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.4.PNG)
+
     * 1040000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.5.PNG)
+
     * 1050000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.6.PNG)
+
     * 1060000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.7.PNG)
+
     * 1070000
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.8.PNG)
+
     * 1080000
-    * 1090000    
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.9.PNG)
+
+    * 1090000   
+
+      [img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/7.9.1.PNG)
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
