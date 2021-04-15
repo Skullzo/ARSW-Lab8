@@ -302,7 +302,21 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
    ¿Qué es SKU, qué tipos hay y en qué se diferencian?
    
+   Azure Container Registry está disponible en varios niveles de servicio (también conocidos como SKU). SKU Significa Unidad de mantenimiento de existencias (Stock Keeping Unit), son un código único asignado a un servicio o producto dentro de azure y representan la posibilidad para comprar existencias.
+   
+   * **Básico:** Un punto de entrada con costos optimizados para que los desarrolladores aprendan sobre Azure Container Registry. Los registros básicos tienen las mismas capacidades programáticas que Standard y Premium.
+
+   * **Estándar:** Los registros estándar ofrecen las mismas capacidades que los básicos, con un mayor rendimiento de imágenes y almacenamiento incluido. Los registros estándar deben satisfacer las necesidades de la mayoría de los escenarios de producción.
+
+   * **Premium:** Los registros Premium proporcionan la mayor cantidad de almacenamiento incluido y operaciones simultáneas, lo que permite escenarios de gran volumen. Además de un mayor rendimiento de imágenes, Premium agrega características como la replicación geográfica para administrar un solo registro en múltiples regiones, confianza en el contenido para la firma de etiquetas de imagen, enlace privado con puntos finales privados para restringir el acceso al registro.
+
+   Se encuentran clasificados en la siguiente tabla a continuación.
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/Tabla.PNG)
+   
    ¿Por qué el balanceador de carga necesita una IP pública?
+   
+   Es necesario asociar una dirección IP pública con una instancia de Azure Load Balancer para que pueda ser accesible desde internet. Esta dirección IP pública actúa como dirección IP de carga equilibrada.
 
 * ¿Cuál es el propósito del *Backend Pool*?
 * ¿Cuál es el propósito del *Health Probe*?
