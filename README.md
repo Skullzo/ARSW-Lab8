@@ -179,7 +179,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
     
-    **En las siguientes tres imágenes, se muestra el resultado obtenido luego de realizar la respectiva ejecución de Postman. Como se muestra en las imágenes, el tiempo de ejecución está por debajo de 1 minuto con 1.2 segundos, y muestra errores principalmente porque no había conexión con la máquina virtual, error que posteriormente fue solucionado.**
+    **En las siguientes tres imágenes, se muestra el resultado obtenido luego de realizar la respectiva ejecución de Postman. Como se muestra en las imágenes, el tiempo de ejecución está por debajo de 1 minuto con 1.2 segundos, y muestra errores principalmente porque no había conexión con la máquina virtual, error que posteriormente fue solucionado. Antes de escalar fallan algunas peticiones por el alto consumo que presenta la CPU, después de escalar se presentan algunos fallos aparentemente por la alta concurrencia, pero como se pueden ver en las siguientes imágenes, se puede ver una mejora considerable en el tiempo de respuesta.**
     
     ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.1.PNG)
     
