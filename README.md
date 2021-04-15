@@ -102,6 +102,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![Imágen 2](images/part1/part1-vm-cpu.png)
 
+**A continuación se muestra el consumo de CPU de uso medido y el consumo total de Red. Como se puede observar, luego de realizar las operaciones correspondientes de Fibonacci con 1000000, 1010000, 1020000, 1030000, 1040000, 1050000, 1060000, 1070000, 1080000 y 1090000, se muestra el alto consumo de CPU y de Red.**
+
+![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/8.1.png)
+
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
