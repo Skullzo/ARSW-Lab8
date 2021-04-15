@@ -129,7 +129,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
    
-   En total Azure junto con la VM crea X recursos.
+   En total Azure junto con la VM crea **7** recursos.
    * Red virtual.
    * Máquina virtual.
    * Dirección IP pública.
@@ -148,7 +148,16 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    * **Dirección IP pública:** Permite acceder a la vm y a conexiones.
    * **Grupo de seguridad:** Se utiliza para filtrar el tráfico de la red.
 
-3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+3. 
+
+¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+   
+* Si se utiliza el comando ```npm FibonacciApp.js``` y la máquina se suspende por inactividad, la aplicación dejaría de correr, al igual que si existe un error en la máquina virtual. Por eso se utiliza ```forever start FibonacciApp.js```.
+
+¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+* El *Inbound port rule* sirve para permitir la entrada al servicio que se está levantando. En este caso la aplicación corre por el puerto 3000, así que es este el que se debe abrir.
+
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
