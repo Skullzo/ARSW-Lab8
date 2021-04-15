@@ -193,11 +193,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
 
-   **Si bien se ve una leve mejora en el tiempo en los primeros, hay una variación atípica en los últimos datos haciendo que no se pueda concluir si el aumento del tamaño de la maquina permitió un mejor funcionamiento.**
+      **Si bien se ve una leve mejora en el tiempo en los primeros, hay una variación atípica en los últimos datos haciendo que no se pueda concluir si el aumento del tamaño de la maquina permitió un mejor funcionamiento.**
 
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
-   **El comportamiento si es porcentualmente mejor ya que presenta menos fallos.**
+      **El comportamiento si es porcentualmente mejor ya que presenta menos fallos.**
 
 ### Parte 2 - Escalabilidad horizontal
 
