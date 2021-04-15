@@ -157,6 +157,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    * El *Inbound port rule* sirve para permitir la entrada al servicio que se está levantando. En este caso la aplicación corre por el puerto 3000, así que es este el que se debe abrir.
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+
+   **A continuación se muestra la gráfica obtenida luego de realizar las operaciones correspondientes de Fibonacci con 1000000, 1010000, 1020000, 1030000, 1040000, 1050000, 1060000, 1070000, 1080000 y 1090000. La función tarda mucho tiempo, y esto se puede deber a la capacidad de procesamiento de la máquina virtual.**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/4.png)
+
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
