@@ -294,7 +294,16 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
 **Preguntas**
 
-* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?
+
+   Los dos tipos de balanceadores de carga que utiliza Azure son:
+   * **Publico:** Proporciona conexiones salientes para máquinas virtuales dentro de su misma red virtual, mediante la traducción de ip privadas a ip publicas.
+   * **Privadas:** Se utilizan para equilibrar el trafico dentro de la red virtual.
+
+   ¿Qué es SKU, qué tipos hay y en qué se diferencian?
+   
+   ¿Por qué el balanceador de carga necesita una IP pública?
+
 * ¿Cuál es el propósito del *Backend Pool*?
 * ¿Cuál es el propósito del *Health Probe*?
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
