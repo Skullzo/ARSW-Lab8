@@ -178,6 +178,15 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
+    
+    **En las siguientes tres imágenes, se muestra el resultado obtenido luego de realizar la respectiva ejecución de Postman. Como se muestra en las imágenes, el tiempo de ejecución está por debajo de 1 minuto con 1.2 segundos, y muestra errores principalmente porque no había conexión con la máquina virtual, error que posteriormente fue solucionado.**
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.1.PNG)
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.2.PNG)
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.3.PNG)
+    
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 
    * **B2ms:** Tiene 2 vCPUs, 8 GB de RAM, 1 data disk y cuesta $ 60.74 dólares mensuales.
