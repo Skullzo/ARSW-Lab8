@@ -178,6 +178,15 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
+    
+    **En las siguientes tres imágenes, se muestra el resultado obtenido luego de realizar la respectiva ejecución de Postman. Como se muestra en las imágenes, el tiempo de ejecución está por debajo de 1 minuto con 1.2 segundos, y muestra errores principalmente porque no había conexión con la máquina virtual, error que posteriormente fue solucionado. Antes de escalar fallan algunas peticiones por el alto consumo que presenta la CPU, después de escalar se presentan algunos fallos aparentemente por la alta concurrencia, pero como se pueden ver en las siguientes imágenes, se puede ver una mejora considerable en el tiempo de respuesta.**
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.1.PNG)
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.2.PNG)
+    
+    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.3.PNG)
+    
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 
    * **B2ms:** Tiene 2 vCPUs, 8 GB de RAM, 1 data disk y cuesta $ 60.74 dólares mensuales.
@@ -285,7 +294,16 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
 **Preguntas**
 
-* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?
+
+   Los dos tipos de balanceadores de carga que utiliza Azure son:
+   * **Publico:** Proporciona conexiones salientes para máquinas virtuales dentro de su misma red virtual, mediante la traducción de ip privadas a ip publicas.
+   * **Privadas:** Se utilizan para equilibrar el trafico dentro de la red virtual.
+
+   ¿Qué es SKU, qué tipos hay y en qué se diferencian?
+   
+   ¿Por qué el balanceador de carga necesita una IP pública?
+
 * ¿Cuál es el propósito del *Backend Pool*?
 * ¿Cuál es el propósito del *Health Probe*?
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
