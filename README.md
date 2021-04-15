@@ -48,13 +48,13 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part1/part1-vm-3000InboudRule.png)
 
-Luego de ejecutar el comando ```node FibonacciApp.js``` en la máquina virtual, se obtiene la siguiente salida en la terminal.
+**Luego de ejecutar el comando ```node FibonacciApp.js``` en la máquina virtual, se obtiene la siguiente salida en la terminal.**
 
-![img](https://github.com/Skullzo/ARSW-Lab3/blob/main/images/part1/6.1.PNG)
+![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.1.PNG)
 
-Para comprobar que se haya compilado y desplegado con éxito en el navegador (en este caso Google Chrome), se escribe la siguiente URL: http://52.167.5.250:3000/fibonacci/6. Como se observa a continuación, se obtiene el valor Fibonacci correspondiente a 6, el cual es 8.
+**Para comprobar que se haya compilado y desplegado con éxito en el navegador (en este caso Google Chrome), se escribe la siguiente URL: http://52.167.5.250:3000/fibonacci/6. Como se observa a continuación, se obtiene el valor Fibonacci correspondiente a 6, el cual es 8.**
 
-![img](https://github.com/Skullzo/ARSW-Lab3/blob/main/images/part1/6.2.PNG)
+![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/6.2.PNG)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
     * 1000000
@@ -94,6 +94,7 @@ Para comprobar que se haya compilado y desplegado con éxito en el navegador (en
 **Preguntas**
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+   
    En total Azure junto con la VM crea X recursos.
    * Red virtual.
    * Máquina virtual.
@@ -103,7 +104,7 @@ Para comprobar que se haya compilado y desplegado con éxito en el navegador (en
    * Disco.
    * Clave SSH.
 
-![img](https://github.com/Skullzo/ARSW-Lab3/blob/main/images/part1/1.1.PNG)
+      ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
 
 2. ¿Brevemente describa para qué sirve cada recurso?
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
