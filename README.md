@@ -195,6 +195,9 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
+## Autor
+[Alejandro Toro Daza](https://github.com/Skullzo)
+## Licencia & Derechos de Autor
+**©** Alejandro Toro Daza, Estudiante de Ingeniería de Sistemas de la [Escuela Colombiana de Ingeniería Julio Garavito](https://www.escuelaing.edu.co/es/).
 
-
-
+Licencia bajo la [GNU General Public License](https://github.com/Skullzo/AREP-Lab8/blob/main/LICENSE).
