@@ -138,7 +138,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    * Disco.
    * Clave SSH.
 
-      ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
 
 2. ¿Brevemente describa para qué sirve cada recurso?
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
