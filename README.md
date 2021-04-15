@@ -163,6 +163,18 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/4.1.png)
 
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+
+   **El consumo de CPU se debe a que la función tiene una complejidad lineal, debido a el for que se utiliza para calcular el resultado, esto hace que entre mayor el número, mayor el tiempo que se necesita.**
+   
+   **Consumo de CPU (uso medido)**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/5.1.png)
+   
+   **Consumo de Red (total)**
+   
+   ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/5.2.png)
+   
+
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
