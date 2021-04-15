@@ -141,6 +141,13 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    ![img](https://github.com/Skullzo/ARSW-Lab8/blob/main/images/part1/1.1.PNG)
 
 2. ¿Brevemente describa para qué sirve cada recurso?
+
+   * **Maquina Virtual:** Se crea para emular un ordenador con sus diferentes componentes y recursos.
+   * **Interfaz de red:** Sirve para señalar la conexión que se da de manera física, entre los dispositivos y el sistema.
+   * **Disco:** Se ultiliza para el almacenamiento de datos. 
+   * **Dirección IP pública:** Permite acceder a la vm y a conexiones.
+   * **Grupo de seguridad:** Se utiliza para filtrar el tráfico de la red.
+
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
