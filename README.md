@@ -184,9 +184,20 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    * **B1ls:** Tiene 1 vCPUs, 0.5 GB de RAM, 1 data disk y cuesta $ 3.80 dólares mensuales.
 
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+
+**Si bien aumentar la capacidad de procesamiento a la máquina ayuda a bajar el tiempo de ejecución de la aplicación, no es la mejor manera de agilizar el cálculo del número, ya que se podría optimizar el código para tener un menor tiempo de ejecución.**
+
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+
+**En el caso de un servicio como éste, podría llevar a sobrecostos en el caso de que se escoja una máquina con exceso de capacidad, o un crecimiento ilimitado.**
+
 10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+
+**Si bien se ve una leve mejora en el tiempo en los primeros, hay una variación atípica en los últimos datos haciendo que no se pueda concluir si el aumento del tamaño de la maquina permitió un mejor funcionamiento.**
+
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+
+**El comportamiento si es porcentualmente mejor ya que presenta menos fallos.**
 
 ### Parte 2 - Escalabilidad horizontal
 
